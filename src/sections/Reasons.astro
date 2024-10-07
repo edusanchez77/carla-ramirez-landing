@@ -1,0 +1,44 @@
+---
+import CardReasons from "@/components/CardReasons.astro";
+import Card from "@/components/CardReasons.astro";
+
+const rsnItems = [
+    {
+        body: "Aumentar el tráfico web y las conversaciones",
+        src: "/icons/megaphone.png"
+    },
+    {
+        body: "Optimizar el gasto publicitario",
+        src: "/img/target.svg"
+    },
+    {
+        body: "Acceder a nuevas herramientas y tecnologías",
+        src: "/img/finance.svg"
+    },
+    {
+        body: "Liberar tiempo y concentrarte en tu negocio",
+        src: "/img/time.svg"
+    }
+]
+---
+
+<section class="pt-16">
+    <h2 class="font-bold text-5xl text-center">
+        Motivos
+    </h2>
+    <p class="mt-2 text-center">
+        Razones por las que deberías contratar a un Trafficker Digital
+    </p>
+    <div class="grid mx-auto gap-7 my-11 max-w-screen-base lg:grid-cols-4 md:px-4 md:grid-cols-2 md:mx-4 sm:grid-cols-1 sm:mx-4 max-sm:mx-4">
+        
+        {
+            rsnItems.map((link) => (
+                <CardReasons
+                    body={link.body}
+                    src={link.src}
+                />
+            ))
+        }
+
+    </div>
+</section>

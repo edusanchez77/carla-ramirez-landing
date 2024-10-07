@@ -1,0 +1,53 @@
+---
+import CardService from "@/components/CardService.astro"
+
+const servItem = [
+    {
+        body: "Planificación e implementación de campañas publicitarias online"
+    },
+    {
+        body: "Definir los objetivos de la campaña"
+    },
+    {
+        body: "Crear estrategias acordes al objetivo para lograr óptimos resultados"
+    },
+    {
+        body: "Seleccionar los canales de publicidad más adecuados"
+    },
+    {
+        body: "Gestionar el presupuesto publicitario"
+    },
+    {
+        body: "Optimización de campañas"
+    },
+    {
+        body: "Monitorear el rendimiento de las campañas"
+    },
+    {
+        body: "Analizar las métricas y realizar los ajustes necesarios"
+    },
+    {
+        body: "Segmentar las audiencias y realizar las pruebas de anuncios"
+    }
+]
+---
+
+<section class="my-8 pt-16 focus-within:animate-fade-in-up animate-delay-300">
+    
+    <h2 class="font-bold text-5xl text-center my-8">
+        Servicios
+    </h2>
+    <li class="text-center grid mx-auto lg:grid-cols-3 md:grid-cols-2 md:mx-4 sm:grid-cols-1 sm:mx-4">
+
+        {
+            servItem.map((link) => (
+                <CardService 
+                    body={link.body}
+                />
+            ))
+        }
+
+
+    </li>
+    
+</section>

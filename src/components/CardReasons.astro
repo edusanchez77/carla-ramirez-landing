@@ -1,0 +1,43 @@
+---
+interface Props {
+	body: string;
+	src: string;
+}
+
+const { src, body } = Astro.props;
+---
+
+
+
+<div class="
+			relative 
+			flex 
+			items-center 
+			justify-center 
+			py-5
+			transition-all 
+			duration-500 
+			border 
+			rounded-2xl 
+			group 
+			before:w-full 
+			before:h-full 
+			before:rounded-2xl 
+			before:backdrop-blur-md 
+			before:absolute 
+			before:inset-0 
+			group 
+			bg-slate-900 
+			shadow-xl
+			lg:mx-0
+			md:mx-4">
+	<img 
+		class="relative h-auto opacity-20 w-max rotate-6 blur-sm transition-all duration-500 group-hover:blur-none group-hover:-translate-y-1/3 group-hover:opacity-100" 
+		src={src}
+		alt=""
+	>
+	<h2 class="absolute w-full px-2 text-md font-bold text-center text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 max-w-[22ch] transition-all duration-500 group-hover:translate-y-1/2 lg:py-2">{body}</h2>
+</div>
+
+
+
